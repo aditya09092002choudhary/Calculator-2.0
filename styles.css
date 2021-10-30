@@ -9,6 +9,7 @@ span{
 background:rgb(228, 228, 228);
 border-radius:40px;
 padding:5px;
+display:inline-block;
 }
 .grid{
     display: grid;
