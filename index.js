@@ -8,18 +8,19 @@ for(items of buttons){
         buttonText = e.target.innerText;
         console.log(buttonText);
         if (buttonText === 'Clear All') {
-            screenValue = "0";
-            screen.value = screenValue;
+            screenValue = "";
+            screen.value = "0";
         }
         else if (buttonText === '=') {
             if(screenValue!==""){
-                screen.value = parseFloat(eval(screenValue));
+                screen.value = eval(screenValue);
                 screenValue = "";
             }
 
                 
         }
         else {
+            screen.value="";
             screenValue += buttonText;
             screen.value = screenValue;
         }
