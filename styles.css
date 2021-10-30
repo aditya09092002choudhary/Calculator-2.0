@@ -5,6 +5,12 @@
     width: 30%;
     margin: 0px auto;
 }
+.grid{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr;
+}
+
 .calcu, .lator{
     font-size: 5rem;
     /* display: none; */
@@ -93,9 +99,13 @@ background: rgb(228, 228, 228);
 }
 
 @media only screen and (max-width: 600px) {
+    .grid{
+        display: block;
+    }
     .container{
         width: 95%;
         margin: 0 auto;
+        text-align: center;
     }
     .calcu, .lator{
         display: none;
@@ -137,15 +147,15 @@ background: rgb(228, 228, 228);
         font-size: 1.5rem;
     }
 
-    .bottom{
+    /* .bottom{
         row-gap: 10px;
         column-gap: 10px;
         padding: 10px;
-    }
+    } */
 
-    .items{
+    /* .items{
         width: auto;
         height: auto;
         font-size: 2rem;
-    }
+    } */
   }
