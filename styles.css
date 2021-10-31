@@ -12,7 +12,7 @@
 .grid{
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-columns: 1fr .8fr 1fr;
 }
 
 .calcu, .lator{
@@ -41,6 +41,9 @@ h1{
     display: none;
     text-align: center;
     color: rgb(207, 7, 7);
+    background-color:rgb(228, 228, 228);
+    width: 100%;
+    border-radius: 20px;
 }
 .display{
     height: 150px;
@@ -80,6 +83,7 @@ button{
     row-gap: 20px;
     column-gap: 20px;
     background: white;
+    border-radius: 0 0 15px 15px;
     
 }
 
@@ -87,8 +91,8 @@ button{
 /* border: 1px solid; */
 text-align: center;
 font-size: 2.5rem;
-width: 80px;
-height: 80px;
+width: 1fr;
+height: 1fr;
 border-radius: 100%;
 box-sizing: border-box;
 padding-top:10px ;
@@ -115,8 +119,10 @@ background: rgb(228, 228, 228);
 }
 
 @media only screen and (min-width: 200px) and (max-width: 600px) {
+    
     .grid{
         display: block;
+        grid-template-columns: 1fr 1fr 1fr;
     }
     .container{
         width: 95%;
@@ -146,6 +152,10 @@ background: rgb(228, 228, 228);
         width: auto;
         height: auto;
         font-size: 2rem;
+        border-radius: 0px;
+    }
+    .clear{
+        border-radius: 0;
     }
   }
 
@@ -154,12 +164,12 @@ background: rgb(228, 228, 228);
         width: 95%;
         margin: 0 auto;
     }
-   
-    /* .grid{
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    } */
+   .grid{
+       justify-content: center;
+       align-items: center;
+       grid-template-columns: 1fr 1.2fr 1fr;
+   }
+    
     .calcu,.lator{
         font-size: 3rem;
     }
@@ -181,19 +191,19 @@ background: rgb(228, 228, 228);
         width: auto;
         height: auto;
         font-size: 2rem;
+        
     }
   }
   @media only screen and (min-width: 900px){
+    body{
+        font-size: 2rem;
+    }
     .container{
         width: 95%;
         margin: 0 auto;
     }
    
-    /* .grid{
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    } */
+    
     .calcu,.lator{
         font-size: 3rem;
     }
@@ -205,15 +215,5 @@ background: rgb(228, 228, 228);
         font-size: 1.5rem;
     }
 
-    /* .bottom{
-        row-gap: 10px;
-        column-gap: 10px;
-        padding: 10px;
-    } */
-
-    /* .items{
-        width: auto;
-        height: auto;
-        font-size: 2rem;
-    } */
+    
   }
